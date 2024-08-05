@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Genel temalar */
+:root {
+  --main-bg-color: #ffffff;
+  --main-text-color: #000000;
+  --button-bg-color: #007bff;
+  --button-text-color: #ffffff;
+  --button-hover-bg-color: #0056b3;
+  --button-hover-text-color: #ffffff;
+  --border-radius: 8px;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body.light {
+  --main-bg-color: #ffffff;
+  --main-text-color: #000000;
+  --button-bg-color: #007bff;
+  --button-text-color: #ffffff;
+  --button-hover-bg-color: #0056b3;
+  --button-hover-text-color: #ffffff;
+}
+
+body.dark {
+  --main-bg-color: #2e2e2e;
+  --main-text-color: #ffffff;
+  --button-bg-color: #007bff;
+  --button-text-color: #ffffff;
+  --button-hover-bg-color: #0056b3;
+  --button-hover-text-color: #ffffff;
+}
+
+body {
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  transition: background-color 0.3s, color 0.3s;
+  font-family: 'Inter', sans-serif;
+}
+
+button {
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+  background-color: var(--button-hover-bg-color);
+  color: var(--button-hover-text-color);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+input, select, .react-datepicker-wrapper {
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  color: black;
+}
+
+input:focus, select:focus, .react-datepicker-wrapper:focus-within {
+  border-color: var(--button-bg-color);
+  box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.2);
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  background-color: var(--main-bg-color);
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  margin: 0.5rem 0;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  color: black;
+}
+
+li:hover {
+  background-color: rgba(0, 123, 255, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
